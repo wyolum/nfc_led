@@ -2,6 +2,8 @@
 An LED that lights up in the presence of a NFC or similar radio signal (approx 13MHz).
 To be made using flex-pcb material.
 
+![nfc_led](https://github.com/wyolum/nfc_led/blob/master/nfc_led_images/nfc_led_01.png)
+
 
 License
 -------

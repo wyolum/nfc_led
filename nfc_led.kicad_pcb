@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew 5.0.0-rc2-dev-unknown-44bf92a~64~ubuntu16.04.1)
+(kicad_pcb (version 20171130) (host pcbnew 5.0.0-rc2-dev-unknown-6866c0c~65~ubuntu16.04.1)
 
   (general
     (thickness 0.1)
@@ -107,10 +107,10 @@
   (module nfc_fp:ant_nfc (layer F.Cu) (tedit 5AF1E381) (tstamp 5B0237D2)
     (at 60 30)
     (path /5AEF0CBD)
-    (fp_text reference L1 (at 0 -10.5) (layer F.SilkS)
+    (fp_text reference L1 (at 0 -4.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.1)))
     )
-    (fp_text value INDUCTOR (at 0 -12) (layer F.Fab)
+    (fp_text value INDUCTOR (at 0 -6.5) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.1)))
     )
     (fp_line (start -0.35 -7.5) (end -2.5 -7.5) (layer B.Cu) (width 0.1))
@@ -330,7 +330,7 @@
       (net 1 /HI))
     (pad 2 smd rect (at 0.75 0 180) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 2 /LO))
-    (model ${KISYS3DMOD}/Inductors_SMD.3dshapes/L_0603.wrl
+    (model ${KIPRJMOD}/nfc_led_3D_modules/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -368,10 +368,10 @@
       (net 1 /HI))
     (pad 1 smd rect (at -0.8 0 180) (size 0.8 0.8) (layers F.Cu F.Paste F.Mask)
       (net 2 /LO))
-    (model ${KISYS3DMOD}/LEDs.3dshapes/LED_0603.wrl
+    (model ${KIPRJMOD}/nfc_led_3D_modules/diode_LED_0603_LTST.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 180))
+      (rotate (xyz 0 0 0))
     )
   )
 
