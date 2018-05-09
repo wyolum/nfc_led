@@ -1,0 +1,78 @@
+(export (version D)
+  (design
+    (source /home/samata/Desktop/NFC_LED/nfc_led/nfc_led/nfc_led.sch)
+    (date "Tue May  8 20:01:06 2018")
+    (tool "Eeschema 5.0.0-rc2-dev-unknown-44bf92a~64~ubuntu16.04.1")
+    (sheet (number 1) (name /) (tstamps /)
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source nfc_led.sch)
+        (comment (number 1) (value ""))
+        (comment (number 2) (value ""))
+        (comment (number 3) (value ""))
+        (comment (number 4) (value "")))))
+  (components
+    (comp (ref L1)
+      (value INDUCTOR)
+      (footprint nfc_fp:ant_nfc)
+      (libsource (lib pspice) (part INDUCTOR))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5AEF0CBD))
+    (comp (ref C1)
+      (value C)
+      (footprint Capacitors_SMD:C_0603)
+      (libsource (lib Device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5AEF0E37))
+    (comp (ref D1)
+      (value LED_ALT)
+      (footprint LEDs:LED_0603)
+      (libsource (lib Device) (part LED_ALT))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5AEF0EF5)))
+  (libparts
+    (libpart (lib Device) (part C)
+      (description "Unpolarized capacitor")
+      (footprints
+        (fp C_*))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) C))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib Device) (part LED_ALT)
+      (description "LED generic, alternativ symbol")
+      (docs ~)
+      (footprints
+        (fp LED*))
+      (fields
+        (field (name Reference) D)
+        (field (name Value) LED_ALT))
+      (pins
+        (pin (num 1) (name K) (type passive))
+        (pin (num 2) (name A) (type passive))))
+    (libpart (lib pspice) (part INDUCTOR)
+      (fields
+        (field (name Reference) L)
+        (field (name Value) INDUCTOR))
+      (pins
+        (pin (num 1) (name 1) (type input))
+        (pin (num 2) (name 2) (type input)))))
+  (libraries
+    (library (logical Device)
+      (uri /home/samata/kicad_sources/kicad-symbols/Device.lib))
+    (library (logical pspice)
+      (uri /home/samata/kicad_sources/kicad-symbols/pspice.lib)))
+  (nets
+    (net (code 1) (name /LO)
+      (node (ref C1) (pin 2))
+      (node (ref D1) (pin 1))
+      (node (ref L1) (pin 1)))
+    (net (code 2) (name /HI)
+      (node (ref D1) (pin 2))
+      (node (ref C1) (pin 1))
+      (node (ref L1) (pin 2)))))
